@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FEA225AC776E4E87A28F0CD /* Pods_RXSwiftTrainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60481EA5F023B58357ECA2C8 /* Pods_RXSwiftTrainProject.framework */; };
 		FA737CEA283A39C60067C316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA737CE9283A39C60067C316 /* AppDelegate.swift */; };
 		FA737CEC283A39C60067C316 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA737CEB283A39C60067C316 /* SceneDelegate.swift */; };
 		FA737CEE283A39C60067C316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA737CED283A39C60067C316 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B264FA2E4FA562ABF4FD10B /* Pods-RXSwiftTrainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftTrainProject.release.xcconfig"; path = "Target Support Files/Pods-RXSwiftTrainProject/Pods-RXSwiftTrainProject.release.xcconfig"; sourceTree = "<group>"; };
+		34592999C78D31B42628A1EA /* Pods-RXSwiftTrainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftTrainProject.debug.xcconfig"; path = "Target Support Files/Pods-RXSwiftTrainProject/Pods-RXSwiftTrainProject.debug.xcconfig"; sourceTree = "<group>"; };
+		60481EA5F023B58357ECA2C8 /* Pods_RXSwiftTrainProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXSwiftTrainProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA737CE6283A39C60067C316 /* RXSwiftTrainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXSwiftTrainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA737CE9283A39C60067C316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA737CEB283A39C60067C316 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FEA225AC776E4E87A28F0CD /* Pods_RXSwiftTrainProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60460EEEDFFD0E0B06F46CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34592999C78D31B42628A1EA /* Pods-RXSwiftTrainProject.debug.xcconfig */,
+				1B264FA2E4FA562ABF4FD10B /* Pods-RXSwiftTrainProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA737CDD283A39C60067C316 = {
 			isa = PBXGroup;
 			children = (
 				FA737CE8283A39C60067C316 /* RXSwiftTrainProject */,
 				FA737CE7283A39C60067C316 /* Products */,
+				F60460EEEDFFD0E0B06F46CC /* Pods */,
+				FB9D4252E11D6DAF0C247A8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = RXSwiftTrainProject;
 			sourceTree = "<group>";
 		};
+		FB9D4252E11D6DAF0C247A8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60481EA5F023B58357ECA2C8 /* Pods_RXSwiftTrainProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA737CFA283A39C90067C316 /* Build configuration list for PBXNativeTarget "RXSwiftTrainProject" */;
 			buildPhases = (
+				391CBEF83769E713AC2430F1 /* [CP] Check Pods Manifest.lock */,
 				FA737CE2283A39C60067C316 /* Sources */,
 				FA737CE3283A39C60067C316 /* Frameworks */,
 				FA737CE4283A39C60067C316 /* Resources */,
+				44284F36D63246DCC5466E6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		391CBEF83769E713AC2430F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RXSwiftTrainProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44284F36D63246DCC5466E6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RXSwiftTrainProject/Pods-RXSwiftTrainProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RXSwiftTrainProject/Pods-RXSwiftTrainProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RXSwiftTrainProject/Pods-RXSwiftTrainProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA737CE2283A39C60067C316 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		FA737CFB283A39C90067C316 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34592999C78D31B42628A1EA /* Pods-RXSwiftTrainProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		FA737CFC283A39C90067C316 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B264FA2E4FA562ABF4FD10B /* Pods-RXSwiftTrainProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
